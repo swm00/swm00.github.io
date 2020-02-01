@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Muse',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="这是一篇记录在MacOS上搭建blog系统的过程, 详细记录了搭建基于github Hexo的个人blog的流水账.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How2BlogOnGitHub">
+<meta property="og:url" content="http://yoursite.com/2020/01/30/Blog%E7%94%9F%E6%88%90%E8%AE%B0/index.html">
+<meta property="og:site_name" content="SWM&#39;s Blog">
+<meta property="og:description" content="这是一篇记录在MacOS上搭建blog系统的过程, 详细记录了搭建基于github Hexo的个人blog的流水账.">
+<meta property="article:published_time" content="2020-01-30T13:53:23.649Z">
+<meta property="article:modified_time" content="2020-02-01T10:04:56.989Z">
+<meta property="article:author" content="swm">
+<meta property="article:tag" content="Git">
+<meta property="article:tag" content="How2">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="Blog">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2020/01/30/Blog%E7%94%9F%E6%88%90%E8%AE%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>How2BlogOnGitHub | SWM's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SWM's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">生活的点滴都值得记录</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/30/Blog%E7%94%9F%E6%88%90%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="swm">
+      <meta itemprop="description" content="我在此记录生活点滴">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SWM's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          How2BlogOnGitHub
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-01-30 21:53:23" itemprop="dateCreated datePublished" datetime="2020-01-30T21:53:23+08:00">2020-01-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-01 18:04:56" itemprop="dateModified" datetime="2020-02-01T18:04:56+08:00">2020-02-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E5%B7%A7%E5%88%86%E4%BA%AB/" itemprop="url" rel="index">
+                    <span itemprop="name">技巧分享</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>这是一篇记录在MacOS上搭建blog系统的过程, 详细记录了搭建基于github Hexo的个人blog的流水账.</p>
+<a id="more"></a>
+
+<h2 id="why-use-git"><a href="#why-use-git" class="headerlink" title="why use git"></a>why use git</h2><p>Blog应该是装B的有效手段, 局限于没有资源不愿意折腾, 一直没有搭建好. 最近在网上看到了这个方法, 利用Github, <strong>即免费又快捷</strong>的方式, 还带域名, 想尝试下, 以便记录下生活中的种种.<br>以下这片就是记录这个blog的搭建过程.</p>
+<h3 id="request"><a href="#request" class="headerlink" title="request"></a>request</h3><ol>
+<li>搭建一个简单易用的blog</li>
+<li>blog类型: 技巧分享, 工作相关, 生活感悟</li>
+<li>标签系统</li>
+</ol>
+<h2 id="process"><a href="#process" class="headerlink" title="process"></a>process</h2><p>参考: <a href="https://www.jianshu.com/p/7210ae6aa451" target="_blank" rel="noopener">https://www.jianshu.com/p/7210ae6aa451</a></p>
+<h3 id="install-git"><a href="#install-git" class="headerlink" title="install git"></a>install git</h3><p>无脑安装git, 自行百度</p>
+<p>git config –global user.name “your name”<br>git config –global user.email “your email address”</p>
+<h4 id="set-ssh"><a href="#set-ssh" class="headerlink" title="set ssh"></a>set ssh</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"xxx@yyy.com"</span></span><br></pre></td></tr></table></figure>
+<p>new SSH key on www</p>
+<h3 id="install-node-js"><a href="#install-node-js" class="headerlink" title="install node.js"></a>install node.js</h3><ul>
+<li>方法一: brew install node</li>
+<li>方法而: <a href="https://nodejs.org/en/下载" target="_blank" rel="noopener">https://nodejs.org/en/下载</a>, 再安装</li>
+</ul>
+<h3 id="install-hexo"><a href="#install-hexo" class="headerlink" title="install hexo"></a>install hexo</h3><p>hexo是一个台湾人写的插件, 基于node.js, 这也是为什么前面要装. 利用它给blog的搭建带来极大的便利</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<h3 id="hexo-init"><a href="#hexo-init" class="headerlink" title="hexo init"></a>hexo init</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;Github folder&gt;</span><br><span class="line">hexo init swm00.github.io <span class="comment">#我的是blog#</span></span><br><span class="line"><span class="built_in">cd</span> swm00.github.io</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<h3 id="hexo-deployer"><a href="#hexo-deployer" class="headerlink" title="hexo deployer"></a>hexo deployer</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> swm00.github.io</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>modify _config.yml:<br>deploy:<br>  type: git<br>  repo: <a href="https://github.com/swm00/swm00.github.io.git" target="_blank" rel="noopener">https://github.com/swm00/swm00.github.io.git</a><br>  branch: master</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>以上几行应该是最常用的命令了</p>
+<h3 id="test"><a href="#test" class="headerlink" title="test"></a>test</h3><p>本地启动服务:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;your folder&gt;</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>然后, 直接在浏览器打开: <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 查看效果</p>
+<h2 id="config"><a href="#config" class="headerlink" title="config"></a>config</h2><p>详细参考这里:<br><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">http://theme-next.iissnan.com/</a></p>
+<h3 id="theme"><a href="#theme" class="headerlink" title="theme"></a>theme</h3><h4 id="theme全局设置"><a href="#theme全局设置" class="headerlink" title="theme全局设置"></a>theme全局设置</h4><p>用了next这个theme, 需要先安装:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:theme-next/hexo-theme-next.git themes/next <span class="comment">##使用ssh方式避免了中途未完成结束的问题</span></span><br></pre></td></tr></table></figure>
+<p>详细参考这里: <a href="https://theme-next.org/" target="_blank" rel="noopener">https://theme-next.org/</a></p>
+<p>修改blog的theme, 在站点_config.yml下的theme: next</p>
+<h4 id="avatar"><a href="#avatar" class="headerlink" title="avatar"></a>avatar</h4><p>source下增加images目录的avata.png文件<br>修改config对应的avatar路径</p>
+<h4 id="sidebar"><a href="#sidebar" class="headerlink" title="sidebar"></a>sidebar</h4><h3 id="service"><a href="#service" class="headerlink" title="service"></a>service</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<h2 id="blog"><a href="#blog" class="headerlink" title="blog"></a>blog</h2><p>只要直接用MD写, 然后放在Source的_post文件夹下, 然后执行:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+
+<h2 id="Todo"><a href="#Todo" class="headerlink" title="Todo"></a>Todo</h2><ul>
+<li>baidu analytics</li>
+<li>rss issue</li>
+<li>置顶</li>
+<li>git权限问题</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>swm
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="http://yoursite.com/2020/01/30/Blog%E7%94%9F%E6%88%90%E8%AE%B0/" title="How2BlogOnGitHub">http://yoursite.com/2020/01/30/Blog生成记/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Git/" rel="tag"># Git</a>
+              <a href="/tags/How2/" rel="tag"># How2</a>
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
+              <a href="/tags/Blog/" rel="tag"># Blog</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/01/31/hello-world/" rel="next" title="Hello World">
+      Hello World <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#why-use-git"><span class="nav-number">1.</span> <span class="nav-text">why use git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#request"><span class="nav-number">1.1.</span> <span class="nav-text">request</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#process"><span class="nav-number">2.</span> <span class="nav-text">process</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#install-git"><span class="nav-number">2.1.</span> <span class="nav-text">install git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#set-ssh"><span class="nav-number">2.1.1.</span> <span class="nav-text">set ssh</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#install-node-js"><span class="nav-number">2.2.</span> <span class="nav-text">install node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#install-hexo"><span class="nav-number">2.3.</span> <span class="nav-text">install hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-init"><span class="nav-number">2.4.</span> <span class="nav-text">hexo init</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-deployer"><span class="nav-number">2.5.</span> <span class="nav-text">hexo deployer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#test"><span class="nav-number">2.6.</span> <span class="nav-text">test</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#config"><span class="nav-number">3.</span> <span class="nav-text">config</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#theme"><span class="nav-number">3.1.</span> <span class="nav-text">theme</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#theme全局设置"><span class="nav-number">3.1.1.</span> <span class="nav-text">theme全局设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#avatar"><span class="nav-number">3.1.2.</span> <span class="nav-text">avatar</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sidebar"><span class="nav-number">3.1.3.</span> <span class="nav-text">sidebar</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#service"><span class="nav-number">3.2.</span> <span class="nav-text">service</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#blog"><span class="nav-number">4.</span> <span class="nav-text">blog</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Todo"><span class="nav-number">5.</span> <span class="nav-text">Todo</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="swm"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">swm</p>
+  <div class="site-description" itemprop="description">我在此记录生活点滴</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">swm</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
