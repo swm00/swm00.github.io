@@ -53,7 +53,7 @@
 <meta property="og:site_name" content="SWM&#39;s Blog">
 <meta property="og:description" content="这是一篇记录在MacOS上搭建blog系统的过程, 详细记录了搭建基于github Hexo的个人blog的流水账.">
 <meta property="article:published_time" content="2020-01-30T13:53:23.649Z">
-<meta property="article:modified_time" content="2020-02-01T10:26:02.076Z">
+<meta property="article:modified_time" content="2020-02-01T10:37:04.842Z">
 <meta property="article:author" content="swm">
 <meta property="article:tag" content="Git">
 <meta property="article:tag" content="How2">
@@ -213,7 +213,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-01 18:26:02" itemprop="dateModified" datetime="2020-02-01T18:26:02+08:00">2020-02-01</time>
+                <time title="Modified: 2020-02-01 18:37:04" itemprop="dateModified" datetime="2020-02-01T18:37:04+08:00">2020-02-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -274,7 +274,9 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:theme-next/hexo-theme-next.git themes/next <span class="comment">##使用ssh方式避免了中途未完成结束的问题</span></span><br></pre></td></tr></table></figure>
 <p>详细参考这里: <a href="https://theme-next.org/" target="_blank" rel="noopener">https://theme-next.org/</a></p>
 <p>修改blog的theme, 在站点_config.yml下的theme: next</p>
-<p>打开tags, categories</p>
+<h4 id="tags-amp-categories"><a href="#tags-amp-categories" class="headerlink" title="tags &amp; categories"></a>tags &amp; categories</h4><p>打开tags, categories</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+<p>在对应的index.md文件中, 增加type: tags</p>
 <h4 id="avatar"><a href="#avatar" class="headerlink" title="avatar"></a>avatar</h4><p>source下增加images目录的avata.png文件<br>修改config对应的avatar路径</p>
 <h4 id="sidebar"><a href="#sidebar" class="headerlink" title="sidebar"></a>sidebar</h4><p>sidebar相关设置:<br>display: always<br>position: left</p>
 <h3 id="service"><a href="#service" class="headerlink" title="service"></a>service</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
@@ -389,7 +391,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#why-use-git"><span class="nav-number">1.</span> <span class="nav-text">why use git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#request"><span class="nav-number">1.1.</span> <span class="nav-text">request</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#process"><span class="nav-number">2.</span> <span class="nav-text">process</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#install-git"><span class="nav-number">2.1.</span> <span class="nav-text">install git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#set-ssh"><span class="nav-number">2.1.1.</span> <span class="nav-text">set ssh</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#install-node-js"><span class="nav-number">2.2.</span> <span class="nav-text">install node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#install-hexo"><span class="nav-number">2.3.</span> <span class="nav-text">install hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-init"><span class="nav-number">2.4.</span> <span class="nav-text">hexo init</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-deployer"><span class="nav-number">2.5.</span> <span class="nav-text">hexo deployer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#test"><span class="nav-number">2.6.</span> <span class="nav-text">test</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#config"><span class="nav-number">3.</span> <span class="nav-text">config</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#theme"><span class="nav-number">3.1.</span> <span class="nav-text">theme</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#theme全局设置"><span class="nav-number">3.1.1.</span> <span class="nav-text">theme全局设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#avatar"><span class="nav-number">3.1.2.</span> <span class="nav-text">avatar</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sidebar"><span class="nav-number">3.1.3.</span> <span class="nav-text">sidebar</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#service"><span class="nav-number">3.2.</span> <span class="nav-text">service</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#blog"><span class="nav-number">4.</span> <span class="nav-text">blog</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Todo"><span class="nav-number">5.</span> <span class="nav-text">Todo</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#why-use-git"><span class="nav-number">1.</span> <span class="nav-text">why use git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#request"><span class="nav-number">1.1.</span> <span class="nav-text">request</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#process"><span class="nav-number">2.</span> <span class="nav-text">process</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#install-git"><span class="nav-number">2.1.</span> <span class="nav-text">install git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#set-ssh"><span class="nav-number">2.1.1.</span> <span class="nav-text">set ssh</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#install-node-js"><span class="nav-number">2.2.</span> <span class="nav-text">install node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#install-hexo"><span class="nav-number">2.3.</span> <span class="nav-text">install hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-init"><span class="nav-number">2.4.</span> <span class="nav-text">hexo init</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-deployer"><span class="nav-number">2.5.</span> <span class="nav-text">hexo deployer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#test"><span class="nav-number">2.6.</span> <span class="nav-text">test</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#config"><span class="nav-number">3.</span> <span class="nav-text">config</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#theme"><span class="nav-number">3.1.</span> <span class="nav-text">theme</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#theme全局设置"><span class="nav-number">3.1.1.</span> <span class="nav-text">theme全局设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tags-amp-categories"><span class="nav-number">3.1.2.</span> <span class="nav-text">tags &amp; categories</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#avatar"><span class="nav-number">3.1.3.</span> <span class="nav-text">avatar</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sidebar"><span class="nav-number">3.1.4.</span> <span class="nav-text">sidebar</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#service"><span class="nav-number">3.2.</span> <span class="nav-text">service</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#blog"><span class="nav-number">4.</span> <span class="nav-text">blog</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Todo"><span class="nav-number">5.</span> <span class="nav-text">Todo</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -410,12 +412,16 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">categories</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
