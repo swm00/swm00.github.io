@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-02T07:26:22.161Z</updated>
+  <updated>2020-02-02T07:48:13.448Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="http://yoursite.com/2020/02/02/%E8%BF%99%E4%BA%9B%E8%BD%AF%E4%BB%B6%E8%AE%A9Mac%E6%9B%B4%E5%85%B7%E7%94%9F%E4%BA%A7%E5%8A%9B/"/>
     <id>http://yoursite.com/2020/02/02/%E8%BF%99%E4%BA%9B%E8%BD%AF%E4%BB%B6%E8%AE%A9Mac%E6%9B%B4%E5%85%B7%E7%94%9F%E4%BA%A7%E5%8A%9B/</id>
     <published>2020-02-02T06:51:37.537Z</published>
-    <updated>2020-02-02T07:26:22.161Z</updated>
+    <updated>2020-02-02T07:48:13.448Z</updated>
     
-    <content type="html"><![CDATA[<p>对于一个Mac用户, 要有趁手的工具才能发挥这个机器应有的价值. 还有一个问题, 好软件多了去了, 如何找到适合的, 不折腾却能把事给办了.<br>这篇文章记录我Mac下常用的几个软件.</p><a id="more"></a><p>我也是从windows转到Mac平台的, 刚开始也很不习惯, 尤其是那会儿office死样, 简直痛苦.<br>随着office的逐渐完善, 现在情况好多了, 基本上已经用不大到windows虚拟机了</p><h2 id="工具选择原则"><a href="#工具选择原则" class="headerlink" title="工具选择原则"></a>工具选择原则</h2><ul><li>Free<br>开源：基本上MaxOS上很多工具都变成订阅模式或者有内购，尽量从开源中找</li><li>使用成本小于学习成本<br>拿起就能用：使用成本小，太复杂不考虑</li></ul><h2 id="Scenario"><a href="#Scenario" class="headerlink" title="Scenario"></a>Scenario</h2><ul><li>PDF-&gt;PPT: 用windows自带的转化工具, 虚拟机, 目前没有太好的免费软件</li><li>查看msg文件: 在Applications目录里msgviewer.jar, 直接运行，把.msg文件拖到msgviewer中  </li><li>英文短语搭配: <a href="https://linggle.com/" target="_blank" rel="noopener">https://linggle.com/</a> （收藏夹）</li></ul><p>有空把这些都写成自动执行的脚本或者workflow, 要您有现成的, 请不吝赐教.</p><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><h3 id="生产力工具"><a href="#生产力工具" class="headerlink" title="生产力工具"></a>生产力工具</h3><p>这部分和职业相关度较高, 我目前用电脑也就一般的办公软件就可以了, 因此没几个软件了</p><ul><li>Office: 目前吃饭最重要的工具, 如果公司不给买, 就自己掏钱买吧. apple全家桶也不错, 不过我本人职业环境中大部分人还是用微软家的东西, 为保持最大的兼容性, 还是用office.</li><li>Chrome: 浏览器不二选择，结合扩展和油猴脚本  </li><li>印象笔记: 信息收集存储，相对搜索还算方便，可以结合affred workflow  </li><li>VSCode: 代替文本编辑器</li><li>vmware: 虚拟机是以备万一的, 实在Mac下搞不定的, 还能去windows下搞</li></ul><h3 id="娱乐"><a href="#娱乐" class="headerlink" title="娱乐"></a>娱乐</h3><p>我不太玩游戏, 基本上就是看看片子听听音乐</p><ul><li>IINA: 视频播放支持格式丰富，性能好  </li><li>QQ音乐: 总体上还是QQ音乐体验好一点</li><li>Irvue: 每天自动更换壁纸, 为了壁纸能经常换又不想费脑筋换哪一张</li></ul><h3 id="系统工具"><a href="#系统工具" class="headerlink" title="系统工具"></a>系统工具</h3><p>MaxOS管理系统挺好的, 其实没什么要系统辅助工具的</p><ul><li>appclearn：应用卸载, 小巧. 有些时候安装一些软件试用, 感觉不好可以随手删掉, 这个可以少留系统垃圾</li><li>Tencent Lemon Cleaner Lite：系统优化, 鹅厂出品</li></ul><h3 id="财经类"><a href="#财经类" class="headerlink" title="财经类"></a>财经类</h3><p>我投(zhu)资(yao)方(ying)式(wei)不(mei)多(qian), 基本上就偶尔看看股票和基金</p><ul><li>富途牛牛: macOS下股票软件  </li><li>支付宝基金: 支付宝-财富-基金-指数红绿灯</li></ul><h3 id="浏览器相关"><a href="#浏览器相关" class="headerlink" title="浏览器相关"></a>浏览器相关</h3><p>浏览器当然用Chrome, 本以为这一部分有很多, 毕竟现在我们很大部分的时间是在用浏览器, 却发现有了tampermonkey之后基本上都不太用了</p><ul><li>浏览器插件<ul><li>剪藏: 这个是个人必备的, 我的知识库在evernote上</li><li>tampermonkey: 非常好的便捷脚本管理, 使得chrome变得无比好用</li><li>uBlock: block广告的, 有好几款基本上都差不多</li><li>Quick QR Code Generator: 生成当前网址的QRCode</li></ul></li></ul><h3 id="思路整理"><a href="#思路整理" class="headerlink" title="思路整理"></a>思路整理</h3><ul><li>mindmap<ul><li>xmind：目前桌面端免费, 够用了</li><li>直接用vscode的mindmap, 这个目前使用体验上还差点, 希望越来越好</li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>对于一个Mac用户, 要有趁手的工具才能发挥这个机器应有的价值. 还有一个问题, 好软件多了去了, 如何找到适合的, 不折腾却能把事给办了.<br>这篇文章记录我Mac下常用的几个软件, 你要有好的, 也请留言告诉我.</p><a id="more"></a><p>我也是从windows转到Mac平台的, 刚开始也很不习惯, 尤其是那会儿office死样, 简直痛苦.<br>随着office的逐渐完善, 现在情况好多了, 基本上已经用不大到windows虚拟机了</p><h2 id="工具选择原则"><a href="#工具选择原则" class="headerlink" title="工具选择原则"></a>工具选择原则</h2><ul><li>Free<br>开源：基本上MaxOS上很多工具都变成订阅模式或者有内购，尽量从开源中找<br>以下列举的大部分都是免费的, 如果有需要花钱的, 我会特别注明</li><li>使用成本小于学习成本<br>拿起就能用：使用成本小，太复杂不考虑</li></ul><h2 id="Scenario"><a href="#Scenario" class="headerlink" title="Scenario"></a>Scenario</h2><ul><li>PDF-&gt;PPT: 用windows自带的转化工具, 虚拟机, 目前没有太好的免费软件</li><li>查看msg文件: 在Applications目录里msgviewer.jar, 直接运行，把.msg文件拖到msgviewer中  </li><li>英文短语搭配: <a href="https://linggle.com/" target="_blank" rel="noopener">https://linggle.com/</a> （放收藏夹）, 经常在写英文的时候, 搞不清楚短语搭配, 比如是用in还是用on等等</li></ul><p>有空把这些都写成自动执行的脚本或者workflow, 要您有现成的, 请不吝赐教.</p><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><h3 id="生产力工具"><a href="#生产力工具" class="headerlink" title="生产力工具"></a>生产力工具</h3><p>这部分和职业相关度较高, 我目前用电脑也就一般的办公软件就可以了, 因此没几个软件了</p><ul><li>Office: 目前吃饭最重要的工具, 如果公司不给买, 就自己掏钱买吧. apple全家桶也不错, 不过我本人职业环境中大部分人还是用微软家的东西, 为保持最大的兼容性, 还是用office.</li><li>Chrome: 浏览器不二选择，结合扩展和油猴脚本  </li><li>alfred: 这个是我的必备工具, 用workflow可以加快输入, 有些自动化对效率提升还是作用很大. 这个软件本身不花钱, 但特别建议花钱买它的powerpack插件, 才能发挥它的作用.</li><li>印象笔记: 信息收集存储，相对搜索还算方便，可以结合affred workflow. 我个人用免费的就可以了, 不用花订阅费</li><li>VSCode: 代替文本编辑器</li><li>euDic: 欧路词典, 不管英文好不好都会用, 词典类功能都差不多, 这个最方便的是, 用快捷键option+space可以快速打开/关闭</li><li>vmware: 虚拟机是以备万一的, 实在Mac下搞不定的, 还能去windows下搞(要花钱买, 目前vmware在Mac下没有免费的)</li></ul><h3 id="娱乐"><a href="#娱乐" class="headerlink" title="娱乐"></a>娱乐</h3><p>我不太玩游戏, 基本上就是看看片子听听音乐</p><ul><li>IINA: 视频播放支持格式丰富，性能好  </li><li>QQ音乐: 总体上还是QQ音乐体验好一点, 用免费的就足够了</li><li>Irvue: 每天自动更换壁纸, 为了壁纸能经常换又不想费脑筋换哪一张</li></ul><h3 id="系统工具"><a href="#系统工具" class="headerlink" title="系统工具"></a>系统工具</h3><p>MaxOS管理系统挺好的, 其实没什么要系统辅助工具的</p><ul><li>appclearn：应用卸载, 小巧. 有些时候安装一些软件试用, 感觉不好可以随手删掉, 这个可以少留系统垃圾</li><li>Tencent Lemon Cleaner Lite：系统优化, 鹅厂出品</li></ul><h3 id="财经类"><a href="#财经类" class="headerlink" title="财经类"></a>财经类</h3><p>我投(zhu)资(yao)方(ying)式(wei)不(mei)多(qian), 基本上就偶尔看看股票和基金</p><ul><li>富途牛牛: macOS下股票软件  </li><li>支付宝基金: 支付宝-财富-基金-指数红绿灯</li></ul><h3 id="浏览器相关"><a href="#浏览器相关" class="headerlink" title="浏览器相关"></a>浏览器相关</h3><p>浏览器当然用Chrome, 本以为这一部分有很多, 毕竟现在我们很大部分的时间是在用浏览器, 却发现有了tampermonkey之后基本上都不太用了</p><ul><li>浏览器插件<ul><li>剪藏: 这个是个人必备的, 我的知识库在evernote上</li><li>tampermonkey: 非常好的便捷脚本管理, 使得chrome变得无比好用</li><li>uBlock: block广告的, 有好几款基本上都差不多</li><li>Quick QR Code Generator: 生成当前网址的QRCode</li></ul></li></ul><h3 id="思路整理"><a href="#思路整理" class="headerlink" title="思路整理"></a>思路整理</h3><ul><li>mindmap<ul><li>xmind：目前桌面端免费, 够用了</li><li>直接用vscode的mindmap, 这个目前使用体验上还差点, 希望越来越好</li></ul></li></ul><h2 id="todo"><a href="#todo" class="headerlink" title="todo"></a>todo</h2><p>这部分是目前的问题, 如果你有好的方案, 请留言告诉我, 先谢了</p><ul><li>alfred下印象笔记的workflow越来越慢了, 不知道是否是笔记多了的缘故</li></ul>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;对于一个Mac用户, 要有趁手的工具才能发挥这个机器应有的价值. 还有一个问题, 好软件多了去了, 如何找到适合的, 不折腾却能把事给办了.&lt;br&gt;这篇文章记录我Mac下常用的几个软件.&lt;/p&gt;
+      &lt;p&gt;对于一个Mac用户, 要有趁手的工具才能发挥这个机器应有的价值. 还有一个问题, 好软件多了去了, 如何找到适合的, 不折腾却能把事给办了.&lt;br&gt;这篇文章记录我Mac下常用的几个软件, 你要有好的, 也请留言告诉我.&lt;/p&gt;
     
     </summary>
     
@@ -38,6 +38,8 @@
       <category term="软件" scheme="http://yoursite.com/tags/%E8%BD%AF%E4%BB%B6/"/>
     
       <category term="Mac" scheme="http://yoursite.com/tags/Mac/"/>
+    
+      <category term="工具" scheme="http://yoursite.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
