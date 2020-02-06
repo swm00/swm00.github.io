@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-06T11:48:28.499Z</updated>
+  <updated>2020-02-06T13:22:29.064Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2020/02/06/imgtest/"/>
     <id>http://yoursite.com/2020/02/06/imgtest/</id>
     <published>2020-02-06T11:42:37.000Z</published>
-    <updated>2020-02-06T11:48:28.499Z</updated>
+    <updated>2020-02-06T13:22:29.064Z</updated>
     
     <content type="html"><![CDATA[<p>图片测试</p><p><img src="/.com//avatar.PNG" alt="img"></p>]]></content>
     
