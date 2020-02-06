@@ -19,7 +19,7 @@
 <script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    hostname: new URL('http://yoursite.com').hostname,
+    hostname: new URL('http://swm00.github.io').hostname,
     root: '/',
     scheme: 'Muse',
     version: '7.7.0',
@@ -49,21 +49,23 @@
   <meta name="description" content="简单调教baidu, 让它作为系统默认搜索引擎, 让它更加符合自己的搜索习惯.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="配置搜索让它更趁手">
-<meta property="og:url" content="http://yoursite.com/2020/02/05/%E9%85%8D%E7%BD%AE%E6%90%9C%E7%B4%A2%E8%AE%A9%E5%AE%83%E6%9B%B4%E8%B6%81%E6%89%8B/index.html">
+<meta property="og:url" content="http://swm00.github.io/2020/02/05/%E9%85%8D%E7%BD%AE%E6%90%9C%E7%B4%A2%E8%AE%A9%E5%AE%83%E6%9B%B4%E8%B6%81%E6%89%8B/index.html">
 <meta property="og:site_name" content="SWM&#39;s Blog">
 <meta property="og:description" content="简单调教baidu, 让它作为系统默认搜索引擎, 让它更加符合自己的搜索习惯.">
-<meta property="og:image" content="http://yoursite.com/.com//swm-img/20200206122620.png">
+<meta property="og:image" content="http://q59fzzm3z.bkt.clouddn.com/swm-img/20200206225328.png">
+<meta property="og:image" content="http://q59fzzm3z.bkt.clouddn.com/swm-img/20200206225729.png">
+<meta property="og:image" content="http://q59fzzm3z.bkt.clouddn.com/swm-img/20200206225547.png">
 <meta property="article:published_time" content="2020-02-05T10:03:33.743Z">
-<meta property="article:modified_time" content="2020-02-06T10:27:58.940Z">
+<meta property="article:modified_time" content="2020-02-06T14:57:48.599Z">
 <meta property="article:author" content="swm">
 <meta property="article:tag" content="chrome">
 <meta property="article:tag" content="alfred">
 <meta property="article:tag" content="search">
 <meta property="article:tag" content="baidu">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/.com//swm-img/20200206122620.png">
+<meta name="twitter:image" content="http://q59fzzm3z.bkt.clouddn.com/swm-img/20200206225328.png">
 
-<link rel="canonical" href="http://yoursite.com/2020/02/05/%E9%85%8D%E7%BD%AE%E6%90%9C%E7%B4%A2%E8%AE%A9%E5%AE%83%E6%9B%B4%E8%B6%81%E6%89%8B/">
+<link rel="canonical" href="http://swm00.github.io/2020/02/05/%E9%85%8D%E7%BD%AE%E6%90%9C%E7%B4%A2%E8%AE%A9%E5%AE%83%E6%9B%B4%E8%B6%81%E6%89%8B/">
 
 
 <script id="page-configurations">
@@ -195,7 +197,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/05/%E9%85%8D%E7%BD%AE%E6%90%9C%E7%B4%A2%E8%AE%A9%E5%AE%83%E6%9B%B4%E8%B6%81%E6%89%8B/">
+    <link itemprop="mainEntityOfPage" href="http://swm00.github.io/2020/02/05/%E9%85%8D%E7%BD%AE%E6%90%9C%E7%B4%A2%E8%AE%A9%E5%AE%83%E6%9B%B4%E8%B6%81%E6%89%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -225,7 +227,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-06 18:27:58" itemprop="dateModified" datetime="2020-02-06T18:27:58+08:00">2020-02-06</time>
+                <time title="Modified: 2020-02-06 22:57:48" itemprop="dateModified" datetime="2020-02-06T22:57:48+08:00">2020-02-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -277,15 +279,13 @@
 </ul>
 <h3 id="修改浏览器默认搜索"><a href="#修改浏览器默认搜索" class="headerlink" title="修改浏览器默认搜索"></a>修改浏览器默认搜索</h3><p>那我们现在就来配置浏览器的默认搜索(我用chrome).</p>
 <p>打开chrome的设置, 新建一个搜索. 由于chrome不让修改默认baidu搜索的配置, 我只能新建一个, 并把这个自定义搜索设置为默认, 如图:</p>
-<p>![](q59fzzm3z.bkt.clouddn.com/swm-img/Screen Shot 2020-02-06 at 11.59.11 AM.png)</p>
+<p><img src="http://q59fzzm3z.bkt.clouddn.com/swm-img/20200206225328.png" alt></p>
 <h3 id="设置alfred的搜索"><a href="#设置alfred的搜索" class="headerlink" title="设置alfred的搜索"></a>设置alfred的搜索</h3><p>我用mac, 其中很多情况下是用alfred的快捷功能和workflow, 因此也修改了alfred的配置. alfred默认搜索是google, 先要在<strong><em>web search</em></strong>中创建默认搜索, 如图:</p>
-<p>![](q59fzzm3z.bkt.clouddn.com/swm-img/Screen Shot 2020-02-06 at 12.20.40 PM.png)</p>
+<p><img src="http://q59fzzm3z.bkt.clouddn.com/swm-img/20200206225729.png" alt></p>
 <p>然后修改<strong><em>default results</em></strong>中的, 点右下角<strong><em>set fallback results</em></strong>, 在打开的窗口中将自定义搜索设为默认搜索, 如图:</p>
-<p><img src="/.com//swm-img/20200206122620.png" alt></p>
+<p><img src="http://q59fzzm3z.bkt.clouddn.com/swm-img/20200206225547.png" alt></p>
 <h2 id="what"><a href="#what" class="headerlink" title="what"></a>what</h2><p>这样设置之后, 是否baidu用起来更加顺手呢, <em>李厂长别怪我哦</em></p>
 <h2 id="todo"><a href="#todo" class="headerlink" title="todo"></a>todo</h2><p>设了参数之后百度经常报“很抱歉…”的问题</p>
-<p>我现在写了一个段落，并且想在这个段落的某一个地方[图片上传失败…(image-43fc5f-1510018038370)]引入一张图片</p>
-<p>我现在写了一个段落，并且想在这个段落的某一个地方[图片上传失败…(image-f9b1fb-1510018038370)]引入一张图片</p>
 
     </div>
 
