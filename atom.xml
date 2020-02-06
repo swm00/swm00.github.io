@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-06T11:44:45.861Z</updated>
+  <updated>2020-02-06T11:48:28.499Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,16 +21,16 @@
     <link href="http://yoursite.com/2020/02/06/imgtest/"/>
     <id>http://yoursite.com/2020/02/06/imgtest/</id>
     <published>2020-02-06T11:42:37.000Z</published>
-    <updated>2020-02-06T11:44:45.861Z</updated>
+    <updated>2020-02-06T11:48:28.499Z</updated>
     
-    <content type="html"><![CDATA[<p>图片测试</p><p><img src="/.com//avatar.png" alt="img"></p>]]></content>
+    <content type="html"><![CDATA[<p>图片测试</p><p><img src="/.com//avatar.PNG" alt="img"></p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;图片测试&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/.com//avatar.png&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/.com//avatar.PNG&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
 
       
     
